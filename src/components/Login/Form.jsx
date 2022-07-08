@@ -36,10 +36,10 @@ const Form = () => {
     <form onSubmit={handleSubmit(submit)} className="login__form">
       <ul className="login__test">
         <li className="flex-login">
-          <b className="login-b">Email: </b>mason@gmail.com
+          <b className="login-b">Email: </b>benjathebest@gmail.com
         </li>
         <li className="flex-login">
-          <b className="login-b">Password:    </b>mason1234
+          <b className="login-b">Password:    </b>10987654
         </li>
       </ul>
       <h2 className="login__title">Enter your information</h2>
