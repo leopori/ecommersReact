@@ -1,5 +1,6 @@
 import React from 'react'
 import { useForm } from 'react-hook-form'
+import './style/homeScreen.css'
 
 const InputSearch = () => {
 
@@ -12,7 +13,7 @@ const InputSearch = () => {
   return (
     <form onSubmit={handleSubmit(submit)} className='form-home'>
       <input type="text" {...register('searchText')} />
-      <button>Search</button>
+      <button className='SearchButon'>Search</button>
     </form>
   )
 }

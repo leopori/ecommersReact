@@ -74,3 +74,23 @@
   color: var(--primary-color);
   cursor: pointer;
 }
+
+
+.form-home{
+  display: flex;
+  font-size: 1.3rem;
+  line-height: 0;
+  margin-inline: 1rem;
+  width: 1000px;
+}
+.SearchButon{
+  background-color: #f85555;
+  border: none;
+  border-bottom-right-radius: 25px;
+  border-top-right-radius: 25px;
+  color: #fff;
+  cursor: pointer;
+  font-size: 0.75
+  rem;
+  padding: 0.5rem 1rem;
+}
