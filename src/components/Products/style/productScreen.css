@@ -3,6 +3,14 @@
   padding: var(--padding-mobile);
   padding-bottom: 60px;
 }
+
+.contianerBtn{
+  display: flex;
+align-items: center;
+justify-items: center;
+
+}
+
 .product-info {
   display: grid;
   grid-template-columns: repeat(2, 1fr);

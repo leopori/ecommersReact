@@ -1,11 +1,14 @@
 import React from 'react'
 import ProductsPurchase from './ProductsPurchase'
+import "./Styles/PurchasesCard.css"
 
 const PurchasesCard = ({purchase}) => {
-
+  console.log(purchase.updateAt)
   return (
     <article className='puchase-card'>
-      <h3>{purchase.updatedAt}</h3>
+      <div className='date-container'>
+        <h3>Date: {purchase.updatedAt}</h3>
+      </div>
       {
         purchase.cart.products.map(product => (
           <ProductsPurchase 

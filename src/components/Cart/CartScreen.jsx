@@ -25,7 +25,7 @@ const CartScreen = () => {
   return (
     <div>
       <button onClick={postPurchase}>
-        <h2>Post Purchase</h2>
+        <h2>Procedetion a la comprachion</h2>
       </button>
 
     </div>

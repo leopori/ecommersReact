@@ -38,7 +38,7 @@ const Form = () => {
         <li className="flex-login">
           <b className="login-b">Email: </b>benjathebest@gmail.com
         </li>
-        <li className="flex-login">
+        <li className="flex-login">      
           <b className="login-b">Password:    </b>10987654
         </li>
       </ul>
