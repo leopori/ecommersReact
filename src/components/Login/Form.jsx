@@ -65,7 +65,7 @@ const Form = () => {
       </ul>
       <div>
         {
-          isErrorLogin && 'Invalid credentials, try again...'
+          isErrorLogin && 'This not your Password or User, so look for it and try again'
         }
       </div>
       <button>Login</button>

@@ -4,7 +4,7 @@ import './style/homeScreen.css'
 
 const InputSearch = () => {
 
-  const {handleSubmit, register, reset} = useForm()
+  const { handleSubmit, register, reset } = useForm()
 
   const submit = data => {
     console.log(data)

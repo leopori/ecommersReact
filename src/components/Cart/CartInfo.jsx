@@ -4,7 +4,7 @@ import { useDispatch } from 'react-redux'
 import { getAllProductsCart } from '../../store/slices/cart.slice'
 import getConfig from '../../utils/getConfig'
 
-const CartInfo = ({productCart}) => {
+const CartInfo = ({ productCart }) => {
 
   const dispatch = useDispatch()
 
