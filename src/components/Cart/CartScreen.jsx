@@ -1,9 +1,14 @@
 import axios from 'axios'
-import React, { useEffect } from 'react'
+import React from 'react'
+import { useDispatch, useSelector } from 'react-redux'
+import { setCartGlobal } from '../../store/slices/cart.slice.js'
 import getConfig from '../../utils/getConfig'
+import CartInfo from './CartInfo'
 import './style/cartScreen.css'
 
 const CartScreen = () => {
+
+  const dispatch = useDispatch()
 
   const postPurchase = () => {
 
@@ -18,17 +23,56 @@ const CartScreen = () => {
     }
 
     axios.post(URL, objPurchase, getConfig())
-      .then(res => console.log(res.data))
+      .then(res => {
+        console.log(res.data)
+        dispatch(setCartGlobal(null))
+      })
       .catch(err => console.log(err.data))
   }
 
-  return (
-    <div>
-      <button onClick={postPurchase}>
-        <h2>Procedetion a la comprachion</h2>
-      </button>
+  const cart = useSelector(state => state.cart)
 
-    </div>
+  console.log(cart)
+
+  let totalPriceCart = 0
+  if(cart) {
+
+    const cb = (acc, cv) => {
+      console.log(cv)
+      return acc + (cv.price * cv.productsInCart.quantity)
+    }
+
+    totalPriceCart = cart.reduce(cb, 0)
+  }
+
+
+  return (
+    <div className='cart'>
+      <h2 className='cart__title'>Your Cart</h2>
+      <div className='cart__container'>
+        {
+          cart?.map(productCart => (
+            <CartInfo
+            key={productCart.id}
+            productCart={productCart}
+            />
+            ))
+        }
+      </div>
+      {
+        cart ?
+          <h2 className='cart__total'>
+            <span className='cart__total-label'>Total: $</span>
+            <span className='cart__total-number'>{totalPriceCart}</span>
+          </h2>
+        :
+          <h2>Are you buying or just Looking</h2>
+      }
+      <button
+        className='cart__btn'
+        onClick={postPurchase}
+      >Time to Buy, Just Click</button>
+    </div>  
   )
 }
 
