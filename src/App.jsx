@@ -1,4 +1,4 @@
-import axios from "axios"
+
 import { useEffect } from "react"
 import { useDispatch } from "react-redux"
 import { Route, Routes } from "react-router-dom"
@@ -11,7 +11,7 @@ import PurchasesScreen from "./components/Purchases/PurchasesScreen"
 import FooterScreen from "./components/Shared/FooterScreen"
 import HeaderScreen from "./components/Shared/HeaderScreen"
 import { getAllproducts } from "./store/slices/products.slice"
-import getConfig from "./utils/getConfig"
+
 
 
 function App() {
